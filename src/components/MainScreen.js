@@ -12,6 +12,7 @@ import CandidateScreening from './ScreenViews/CandidateScreening';
 import Talent_Test from './ScreenViews/Talent_Test';
 import Policies from './ScreenViews/Policies';
 import Prescreening from './ScreenViews/Prescreening';
+import HiringPage from './ScreenViews/HiringPage'
 
 
 function MainScreen() {
@@ -51,6 +52,8 @@ function MainScreen() {
                             <Route path="/talenttest" element={<Talent_Test />} />
                             <Route path="/prescreening" element={<Prescreening />} />
                             <Route path="/prescreening/:candidateId" element={<Prescreening />} />
+                            <Route path="/policies" element={<Policies />} />
+                            <Route path="/HiringPage" element={<HiringPage />} />
                             <Route path="/policies" element={<Policies />} />
                             
                            

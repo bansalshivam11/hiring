@@ -8,8 +8,6 @@ import axios from 'axios'; // Import axios for making API requests
 
 //import resume from '../../views/img/resume';
 
-import ReactHTMLTableToExcel from 'react-html-table-to-excel';
-
 
 
 function CandidateScreening() {
@@ -275,15 +273,7 @@ const currentPageData = candidates.slice(startIndex, endIndex);
             Export to Excel
         </Button> */}
 
-<ReactHTMLTableToExcel
-            id="export-to-excel"
-            className="btn btn-primary"
-            table="candidates-table"
-            filename="candidates"
-            sheet="Sheet1"
-            buttonText="Export to Excel"
-            style={{ marginLeft: '10px', fontSize: '10px', padding: '5px 10px' }}
-        />
+
 
     </div>
 </div>

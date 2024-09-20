@@ -4,7 +4,7 @@ import swal from "sweetalert";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
 import "./Detections.css";
-
+import { Button } from "react-bootstrap";
 /**
  * This is the object detection class which uses webcam input
  * feed and runs coco-ssd model for object detection
@@ -17,7 +17,7 @@ export default class Detection extends React.Component {
   constructor(props) {
     super(props);
     // count in state stores no of frames passed since face is not visible
-    this.state = { count: 0 };
+    this.state = { count: 0, show: true };
   }
 
   /**
@@ -161,25 +161,34 @@ export default class Detection extends React.Component {
 
   render() {
     return (
-      <div>
-        <video
-          style={{ marginTop: "6%", marginLeft: "30%" }}
-          className="size"
-          autoPlay
-          playsInline
-          muted
-          ref={this.videoRef}
-          width="800"
-          height="400"
-        />
-        <canvas
-          style={{ marginTop: "6%", marginLeft: "30%" }}
-          className="size"
-          ref={this.canvasRef}
-          width="800"
-          height="400"
-        />
-      </div>
+      <>
+        {this.state.show && (
+          <div>
+            <video
+              style={{ marginTop: "6%", marginLeft: "30%" }}
+              className="size"
+              autoPlay
+              playsInline
+              muted
+              ref={this.videoRef}
+              width="800"
+              height="400"
+            />
+            <canvas
+              style={{ marginTop: "6%", marginLeft: "30%" }}
+              className="size"
+              ref={this.canvasRef}
+              width="800"
+              height="400"
+            />
+          </div>
+        )}
+        <div>
+          <Button onClick={() => this.setState({ show: !this.state.show })}>
+            Stop
+          </Button>
+        </div>
+      </>
     );
   }
 }

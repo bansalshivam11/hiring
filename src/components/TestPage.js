@@ -118,19 +118,19 @@ export default function TestPage(props) {
    * @param {Keypress Event} event
    * @returns false if key is Ctrl or Alt else true
    */
-  //   function handleKeyPress(event) {
-  //     if (event.altKey) {
-  //       setKeyPress(key_press + 1);
-  //       swal("Alt Key Press Detected", "Action has been Recorded", "error");
-  //       return false;
-  //     } else if (event.ctrlKey) {
-  //       setKeyPress(key_press + 1);
-  //       swal("Ctrl Key Press Detected", "Action has been Recorded", "error");
-  //       return false;
-  //     } else {
-  //       return true;
-  //     }
-  //   }
+  function handleKeyPress(event) {
+    if (event.altKey) {
+      setKeyPress(key_press + 1);
+      swal("Alt Key Press Detected", "Action has been Recorded", "error");
+      return false;
+    } else if (event.ctrlKey) {
+      setKeyPress(key_press + 1);
+      swal("Ctrl Key Press Detected", "Action has been Recorded", "error");
+      return false;
+    } else {
+      return true;
+    }
+  }
 
   useEffect(() => {
     // Initialising all the event handlers when the page loads
@@ -146,7 +146,7 @@ export default function TestPage(props) {
       },
       false
     );
-    // document.addEventListener("keydown", handleKeyPress, false);
+    document.addEventListener("keydown", handleKeyPress, false);
 
     // if (!checkedPrevLogs) {
     //   getPreviousLogs();
@@ -163,11 +163,11 @@ export default function TestPage(props) {
         },
         false
       );
-      //   document.removeEventListener(
-      //     "keydown",
-      //     (event) => handleKeyPress(event),
-      //     false
-      //   );
+      document.removeEventListener(
+        "keydown",
+        (event) => handleKeyPress(event),
+        false
+      );
     };
   });
 
@@ -216,14 +216,14 @@ export default function TestPage(props) {
         className="my_container"
         id="my_container"
       >
-        {/* <div className="detect">
+        <div className="detect">
           <Detection
             MobilePhone={update_mobile_phone_found}
             ProhibitedObject={update_prohibited_object_found}
             FaceNotVisible={update_face_not_visible}
             MultipleFacesVisible={update_multiple_faces_visible}
           />
-        </div> */}
+        </div>
 
         {/* <br />
       <div className="name">

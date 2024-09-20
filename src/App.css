@@ -10,10 +10,10 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 260px 1fr 1fr 1fr;
-  grid-template-rows: 60px 1fr; 
-  grid-template-areas: 
-      "sidebar header header header"
-      "sidebar main main main"; 
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar main main main";
   height: 100vh;
   width: 100%;
   overflow: hidden;
@@ -32,10 +32,8 @@ body {
   width: 100%;
 }
 
-
-
 /* Sidebar styles */
-.sidebar {
+/* .sidebar {
   grid-area: sidebar;
   background-color: #034EA2;
   color: #fff;
@@ -45,8 +43,38 @@ body {
   padding:0;
   font-family: 'Noto Sans', sans-serif;
   width: 260px;
+} */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #034ea2; /* Retained the background color */
+  color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+  transition: transform 0.4s ease, background-color 0.3s ease;
+  padding: 20px 0; /* Add some padding for better spacing */
+  font-family: "Noto Sans", sans-serif;
+  width: 260px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for a depth effect */
+  position: fixed; /* Make it fixed for better usability */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other elements */
 }
 
+/* Sidebar hover effect for smooth interaction */
+.sidebar:hover {
+  background-color: #023b7e; /* Slightly darker color on hover */
+}
+
+/* Sidebar Link Styling */
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s;
+}
 /* CSS for the company logo and text link */
 .brand-link {
   display: flex;
@@ -95,7 +123,7 @@ body {
   align-items: center;
   margin-bottom: 5px;
   text-decoration: none;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .dropdown-toggle:hover {
@@ -107,7 +135,7 @@ body {
   color: #fff;
   padding: 10px 20px;
   text-decoration: none;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 
 .dropdown-item:hover {
@@ -133,12 +161,11 @@ body {
   opacity: 1;
 }
 
-
 .form-container {
-  grid-area: main; 
-    overflow-y: auto;
-    padding: 20px;
-    width: auto;
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px;
+  width: auto;
 }
 
 /* Main container styling */
@@ -151,9 +178,9 @@ body {
 
 /* Form alignment and styling */
 .main-container .container {
-    text-align: left; /* Align form to the left */
-    max-width: 750px; /* Adjust the maximum width for the container */
-    margin: 0 auto; /* Center the form in the container */
+  text-align: left; /* Align form to the left */
+  max-width: 750px; /* Adjust the maximum width for the container */
+  margin: 0 auto; /* Center the form in the container */
 }
 
 /* Heading styling */
@@ -232,6 +259,3 @@ textarea.form-control {
 }
 
 /* Dashboard Table CSS */
-
-
-

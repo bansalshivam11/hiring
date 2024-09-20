@@ -12,6 +12,7 @@ import CandidateScreening from "./ScreenViews/CandidateScreening";
 import Talent_Test from "./ScreenViews/Talent_Test";
 import Policies from "./ScreenViews/Policies";
 import Prescreening from "./ScreenViews/Prescreening";
+import HiringPage from "./ScreenViews/HiringPage";
 import TestPage from "./TestPage";
 
 function MainScreen() {
@@ -69,6 +70,8 @@ function MainScreen() {
                 path="/prescreening/:candidateId"
                 element={<Prescreening />}
               />
+              <Route path="/policies" element={<Policies />} />
+              <Route path="/HiringPage" element={<HiringPage />} />
               <Route path="/policies" element={<Policies />} />
               <Route path="/users/entry-assessment" element={<TestPage />} />
             </Routes>

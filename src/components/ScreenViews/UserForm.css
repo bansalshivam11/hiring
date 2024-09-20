@@ -24,6 +24,7 @@
     color: #555;
 }
 
+/* Styles for input fields */
 .form-group input {
     width: 100%;
     padding: 10px;
@@ -37,6 +38,22 @@
     outline: none;
 }
 
+/* Styles for dropdown (select) */
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    background-color: white;
+}
+
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Styles for submit button */
 .submit-button {
     width: 100%;
     padding: 10px;

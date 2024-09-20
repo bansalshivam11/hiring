@@ -69,6 +69,18 @@ function LeftNavBar() {
           />
           Create Job opening
         </Nav.Link>
+        <Nav.Link
+          as={NavLink}
+          to="/candidates"
+          style={{ fontSize: "15px", padding: "10px" }}
+        >
+          <img
+            src={candidates}
+            alt="Candidates Screening"
+            style={{ width: "20px", height: "20px", marginRight: "10px" }}
+          />
+          Candidate Dashboard
+        </Nav.Link>
         {/* <Nav.Link as={NavLink} to="/approvals" style={{ fontSize: '15px', padding: '10px' }}>
                     <img src={approval} alt="Approvals" style={{ width: '20px', height: '20px', marginRight: '10px' }} />
                     Approval Workflow
@@ -83,7 +95,7 @@ function LeftNavBar() {
             alt=" CV Screening"
             style={{ width: "20px", height: "20px", marginRight: "10px" }}
           />
-          Auto Screener
+          Resume Screener
         </Nav.Link>
         {/* <Nav.Link
           as={NavLink}
@@ -97,18 +109,7 @@ function LeftNavBar() {
           />
           Candidate Data Management
         </Nav.Link> */}
-        <Nav.Link
-          as={NavLink}
-          to="/candidates"
-          style={{ fontSize: "15px", padding: "10px" }}
-        >
-          <img
-            src={candidates}
-            alt="Candidates Screening"
-            style={{ width: "20px", height: "20px", marginRight: "10px" }}
-          />
-          Candidate Dashboard
-        </Nav.Link>
+        
         {/* Dropdown */}
         <div
           className="dropdown"

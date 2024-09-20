@@ -127,41 +127,65 @@ function CandidateScreening() {
       // );
       const data = [
         {
-          name: "Alice Johnson",
-          email: "alice.johnson@example.com",
+          name: "Rakesh Sharma",
+          email: "rakesh.sharmaji@gmail.com",
+          currentDesignation: "Project Manager",
+          source: 'External Agency',
+          experience: 9,
+          dateOfApplication: "2024-08-16",
+          status: 'Next round pending',
+          team:'KM Easy Mode',
+        },
+        {
+          name: "Ananya Sharma",
+          email: "ananya.sharma@gmail.com",
           currentDesignation: "Software Engineer",
           experience: 5,
+          source: 'Employee Referral',
           dateOfApplication: "2024-09-15",
+          team:'Cloud MES',
+          status: 'Next round pending',
         },
         {
-          name: "Bob Smith",
-          email: "bob.smith@example.com",
+          name: "Rohan Mehta",
+          email: "rohan.mehta@gmail.com",
           currentDesignation: "Project Manager",
+          source: 'Employee Referral',
           experience: 8,
           dateOfApplication: "2024-09-16",
+          status: 'Next round pending',
+          team:'SCMP',
         },
         {
-          name: "Charlie Brown",
-          email: "charlie.brown@example.com",
+          name: "Karan Patel",
+          email: "karan.patel@gmail.com",
           currentDesignation: "Data Analyst",
+          source: 'External Agency',
           experience: 3,
           dateOfApplication: "2024-09-17",
+          status: 'Selected',
+          team:'Tech Support',
         },
         {
-          name: "Dana Lee",
-          email: "dana.lee@example.com",
+          name: "Neha Iyer",
+          email: "neha.iyer@gmail.com",
           currentDesignation: "UX Designer",
+          source: 'Employee Referral',
           experience: 4,
           dateOfApplication: "2024-09-18",
+          status: 'Next round pending',
+          team:'IDE Analyser',
         },
         {
-          name: "Eve Davis",
-          email: "eve.davis@example.com",
-          currentDesignation: "Marketing Specialist",
+          name: "Priya Singh",
+          email: "priya.singh@gmail.com",
+          currentDesignation: "DevOps",
+          source: 'External Agency',
           experience: 6,
-          dateOfApplication: "2024-09-19",
-        },
-      ];
+          dateOfApplication:"2024-09-18",
+          status: 'Rejected',
+          team:'O9 Solutions',
+        }]      
 
       //   const candidateData = data.map((candidate) => ({
       //     name: candidate.name,
@@ -394,9 +418,12 @@ function CandidateScreening() {
             <th style={{ whiteSpace: "nowrap" }}>Name</th>
             <th style={{ whiteSpace: "nowrap" }}>Email</th>
             {/* <th style={{ whiteSpace: "nowrap" }}>Current Company</th> */}
-            <th style={{ whiteSpace: "nowrap" }}>Current Designation</th>
+            <th style={{ whiteSpace: "nowrap" }}>Position</th>
             <th style={{ whiteSpace: "nowrap" }}>Years of Experience</th>
+            <th style={{ whiteSpace: "nowrap" }}>Source</th>
+            <th style={{ whiteSpace: "nowrap" }}>Team</th>
             <th style={{ whiteSpace: "nowrap" }}>Date of Application</th>
+            <th style={{ whiteSpace: "nowrap" }}>Application Status</th>
             <th style={{ whiteSpace: "nowrap" }}>Resume</th>
             {/* <th style={{ whiteSpace: "nowrap" }}>Requisition ID</th> */}
             {/* <th style={{ whiteSpace: "nowrap" }}>Approval Submitted ID</th> */}
@@ -430,7 +457,7 @@ function CandidateScreening() {
               <td
                 style={{
                   padding: "5px",
-                  textAlign: "center",
+                  textAlign: "left",
                   whiteSpace: "nowrap",
                 }}
               >
@@ -439,7 +466,7 @@ function CandidateScreening() {
               <td
                 style={{
                   padding: "5px",
-                  textAlign: "center",
+                  textAlign: "left",
                   whiteSpace: "nowrap",
                 }}
               >
@@ -457,7 +484,7 @@ function CandidateScreening() {
               <td
                 style={{
                   padding: "5px",
-                  textAlign: "center",
+                  textAlign: "left",
                   whiteSpace: "nowrap",
                 }}
               >
@@ -466,7 +493,7 @@ function CandidateScreening() {
               <td
                 style={{
                   padding: "5px",
-                  textAlign: "center",
+                  textAlign: "left",
                   whiteSpace: "nowrap",
                 }}
               >
@@ -476,16 +503,47 @@ function CandidateScreening() {
               <td
                 style={{
                   padding: "5px",
-                  textAlign: "center",
+                  textAlign: "left",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {candidate.source}
+              </td>
+
+              <td
+                style={{
+                  padding: "5px",
+                  textAlign: "left",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {candidate.team}
+              </td>
+
+              <td
+                style={{
+                  padding: "5px",
+                  textAlign: "left",
                   whiteSpace: "nowrap",
                 }}
               >
                 {candidate.dateOfApplication}
               </td>
+
               <td
                 style={{
                   padding: "5px",
-                  textAlign: "center",
+                  textAlign: "left",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {candidate.status}
+              </td>
+
+              <td
+                style={{
+                  padding: "5px",
+                  textAlign: "left",
                   whiteSpace: "nowrap",
                 }}
               >

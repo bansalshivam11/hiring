@@ -46,14 +46,14 @@ const Posenet = () => {
     }
   };
 
-  // const drawCanvas = (pose, video, videoWidth, videoHeight, canvas) => {
-  //   const ctx = canvas.current.getContext("2d");
-  //   canvas.current.width = videoWidth;
-  //   canvas.current.height = videoHeight;
+  const drawCanvas = (pose, video, videoWidth, videoHeight, canvas) => {
+    const ctx = canvas.current.getContext("2d");
+    canvas.current.width = videoWidth;
+    canvas.current.height = videoHeight;
 
-  //   drawKeypoints(pose["keypoints"], 0.6, ctx);
-  //   drawSkeleton(pose["keypoints"], 0.7, ctx);
-  // };
+    drawKeypoints(pose["keypoints"], 0.6, ctx);
+    drawSkeleton(pose["keypoints"], 0.7, ctx);
+  };
 
   const EarsDetect = (keypoints, minConfidence) => {
     //console.log("Checked")

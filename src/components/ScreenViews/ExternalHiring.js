@@ -3,6 +3,8 @@ import { useParams, useNavigate } from "react-router-dom";
 import "./UserForm.css"; // Import the CSS file
 
 const UserForm = () => {
+  const [vendorId, setVendorId] = useState("");
+  const [vendorName, setVendorName] = useState("");
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
@@ -17,6 +19,8 @@ const UserForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
+    formData.append("vendorId", vendorId);
+    formData.append("vendorName", vendorName);
     formData.append("name", name);
     formData.append("mobile", mobile);
     formData.append("email", email);
@@ -24,6 +28,8 @@ const UserForm = () => {
     if (file) {
       formData.append("file", file);
     }
+
+    const onClickSubmit = () => {};
 
     // Replace with your API endpoint
     fetch("YOUR_API_ENDPOINT", {
@@ -34,6 +40,8 @@ const UserForm = () => {
       .then((data) => {
         console.log("Success:", data);
         // Reset form
+        setVendorId("");
+        setVendorName("");
         setName("");
         setMobile("");
         setEmail("");
@@ -48,6 +56,24 @@ const UserForm = () => {
   return (
     <form className="user-form" onSubmit={handleSubmit}>
       <h2>Candidate Information</h2>
+      <div className="form-group">
+        <label>Vendor ID:</label>
+        <input
+          type="text"
+          value={vendorId}
+          onChange={(e) => setVendorId(e.target.value)}
+          required
+        />
+      </div>
+      <div className="form-group">
+        <label>Vendor Name:</label>
+        <input
+          type="text"
+          value={vendorName}
+          onChange={(e) => setVendorName(e.target.value)}
+          required
+        />
+      </div>
       <div className="form-group">
         <label>Candidate Name:</label>
         <input
@@ -67,7 +93,7 @@ const UserForm = () => {
         />
       </div>
       <div className="form-group">
-        <label>Email:</label>
+        <label>Candidate Email:</label>
         <input
           type="email"
           value={email}
@@ -86,7 +112,7 @@ const UserForm = () => {
             Select a job description
           </option>
           <option value="Software Engineer">Software Engineer</option>
-          <option value="Product Manager">DevOps Engineer</option>
+          <option value="Product Manager">Product Manager</option>
           <option value="Data Analyst">Data Analyst</option>
           <option value="UX/UI Designer">UX/UI Designer</option>
         </select>

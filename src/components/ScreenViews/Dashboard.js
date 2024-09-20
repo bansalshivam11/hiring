@@ -11,36 +11,36 @@ function Dashboard() {
   const [jobreq, setJobreq] = useState([
     {
       jobReqId: 101,
-      title: "Software Engineer",
+      position: "Software Engineer",
       department: "Engineering",
-      location: "Remote",
+      location: "Gurugram",
       status: "Open",
       postedDate: "2024-09-01",
       jobType: "Full-time",
     },
     {
       jobReqId: 103,
-      title: "UX Designer",
+      position: "UX Designer",
       department: "Design",
-      location: "San Francisco, CA",
+      location: "Noida",
       status: "Open",
       postedDate: "2024-09-10",
       jobType: "Contract",
     },
     {
       jobReqId: 104,
-      title: "Data Analyst",
+      position: "Data Analyst",
       department: "Analytics",
-      location: "Austin, TX",
+      location: "Hyderabad",
       status: "Open",
       postedDate: "2024-09-05",
       jobType: "Full-time",
     },
     {
       jobReqId: 105,
-      title: "DevOps Engineer",
+      position: "DevOps Engineer",
       department: "Engineering",
-      location: "Remote",
+      location: "Gurugram",
       status: "Open",
       postedDate: "2024-08-28",
       jobType: "Full-time",
@@ -186,15 +186,15 @@ function Dashboard() {
           size="lg"
           onClick={()=>{history('/HiringPage')}}
         >
-          Internal Hiring
+          Employee Referral
         </Button>{" "}
         <Button
           style={{ align: "right" }}
           variant="secondary"
           size="lg"
-          onClick={()=><Link to={"./HiringPage"}></Link>}
+          onClick={()=>{history('/ExternalHiring')}}
         >
-          External Hiring
+          External Agency
         </Button>
       </div>
     </div>

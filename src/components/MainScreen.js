@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import GenNavBar from './GenNavBar';
-import LeftNavBar from './LeftNavBar';
-import JobReq from './ScreenViews/JobReq';
-import JobReqDetail from './ScreenViews/JobReqDetail';
-import Dashboard from './ScreenViews/Dashboard';
-import Approvals from './ScreenViews/Approvals';
-import CV_Screening from './ScreenViews/CV_Screening';
-import Profile_Post from './ScreenViews/Profile_Post';
-import CandidateScreening from './ScreenViews/CandidateScreening';
-import Talent_Test from './ScreenViews/Talent_Test';
-import Policies from './ScreenViews/Policies';
-import Prescreening from './ScreenViews/Prescreening';
-import HiringPage from './ScreenViews/HiringPage'
-import ExternalHiring from './ScreenViews/ExternalHiring'
-
-=======
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GenNavBar from "./GenNavBar";
@@ -32,8 +13,8 @@ import Talent_Test from "./ScreenViews/Talent_Test";
 import Policies from "./ScreenViews/Policies";
 import Prescreening from "./ScreenViews/Prescreening";
 import HiringPage from "./ScreenViews/HiringPage";
+import ExternalHiring from "./ScreenViews/ExternalHiring"
 import TestPage from "./TestPage";
->>>>>>> d6b0d792cc129d60b6b3ec0054a283e942de2d02
 
 function MainScreen() {
   const [formDataObject, setFormDataObject] = useState({});
@@ -92,6 +73,7 @@ function MainScreen() {
               />
               <Route path="/policies" element={<Policies />} />
               <Route path="/HiringPage" element={<HiringPage />} />
+              <Route path="/ExternalHiring" element={<ExternalHiring />} />
               <Route path="/policies" element={<Policies />} />
               <Route path="/users/entry-assessment" element={<TestPage />} />
             </Routes>

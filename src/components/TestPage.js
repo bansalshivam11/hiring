@@ -275,7 +275,7 @@ export default function TestPage(props) {
       </div> */}
       </div>
       <div
-        style={{ marginTop: "45%", display: "flex", flexDirection: "column" }}
+        style={{ marginTop: "30%", display: "flex", flexDirection: "column" }}
       >
         <div>{`phone detected: ${mobile_phone_found}`}</div>
         <div>{`prohibited object detected: ${prohibited_object_found}`}</div>

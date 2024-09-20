@@ -192,7 +192,7 @@ function Dashboard() {
           style={{ align: "right" }}
           variant="secondary"
           size="lg"
-          onClick={()=><Link to={"./HiringPage"}></Link>}
+          onClick={()=>{history('/ExternalHiring')}}
         >
           External Hiring
         </Button>

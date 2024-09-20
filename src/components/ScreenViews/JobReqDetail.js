@@ -289,9 +289,9 @@ function JobReqDetail() {
           </Form.Group>
         ))}
         <div style={{ padding: "20px" }}>
-          <Button variant="primary" onClick={toggleFileUpload}>
+          {/* <Button variant="primary" onClick={toggleFileUpload}>
             {showFileUpload ? "Hide File Upload" : "Upload File"}
-          </Button>
+          </Button> */}
 
           {showFileUpload && (
             <div style={{ marginTop: "20px" }}>

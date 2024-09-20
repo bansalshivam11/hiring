@@ -109,7 +109,7 @@ function LeftNavBar() {
           />
           Candidate Data Management
         </Nav.Link> */}
-        
+
         {/* Dropdown */}
         <div
           className="dropdown"
@@ -183,7 +183,7 @@ function LeftNavBar() {
                 alt="Entry"
                 style={{ width: "20px", height: "20px", marginRight: "10px" }}
               />
-              Interview Round
+              Screening chat bot
             </Nav.Link>
           </div>
         </div>
@@ -200,7 +200,7 @@ function LeftNavBar() {
           />
           Interview Scheduler
         </Nav.Link>
-        {/* <Nav.Link
+        <Nav.Link
           as={NavLink}
           to="/policies"
           style={{ fontSize: "15px", padding: "10px" }}
@@ -210,8 +210,8 @@ function LeftNavBar() {
             alt="Entry"
             style={{ width: "20px", height: "20px", marginRight: "10px" }}
           />
-          HR Policies and Guidelines
-        </Nav.Link> */}
+          Performance Dashboard
+        </Nav.Link>
       </Nav>
     </div>
   );
